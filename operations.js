@@ -13,7 +13,6 @@ export function operations(ops) {
   let result;
   let numbers = [];
   const opsArray = ops.split(' ').filter((item) => item !== '');
-  console.log(opsArray);
   for (let i = 0; i < opsArray.length; i++) {
     const item = opsArray[i];
     // if item is number
@@ -37,7 +36,6 @@ export function operations(ops) {
         numbers.pop();
       }
     }
-    console.log(numbers);
   }
   result = addNums(numbers);
   return result;

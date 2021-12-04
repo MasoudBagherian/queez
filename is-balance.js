@@ -5,8 +5,6 @@ Array.prototype.getIndex = function (value) {
 export function isBalance(input) {
   let result;
   const specialChars = '[](){}'.split('');
-  console.log('======== input ===========');
-  console.log(input);
   const stack = [];
   for (let i = 0; i < input.length; i++) {
     const charIndex = specialChars.getIndex(input[i]);
@@ -25,8 +23,6 @@ export function isBalance(input) {
         return false;
       }
     }
-    console.log(`==== step ${i + 1} ====`);
-    console.log(stack);
   }
   result = stack.length ? false : true;
   return result;
